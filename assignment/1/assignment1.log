@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.26)  26 JAN 2024 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.26)  30 JAN 2024 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,30 +471,30 @@ e
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (23.96129pt too wide) in paragraph at lines 84--85
+Overfull \hbox (23.96129pt too wide) in paragraph at lines 89--90
 \OT1/cmr/m/n/12 cause $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 f\OT
 1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m
 /n/12 3\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 )$ can-not ex-ceed past $[]$ namely $1
 $, by $\OML/cmm/m/it/12 Kolmovgorov Axiom \OT1/cmr/m/n/12 2$. 
  []
 
-
-Overfull \hbox (7.0573pt too wide) in paragraph at lines 104--105
-[][] 
- []
-
 [3]
-Overfull \hbox (7.0573pt too wide) in paragraph at lines 126--127
+Overfull \hbox (7.0573pt too wide) in paragraph at lines 109--110
 [][] 
  []
 
 
-Overfull \hbox (7.0573pt too wide) in paragraph at lines 143--144
+Overfull \hbox (7.0573pt too wide) in paragraph at lines 131--132
 [][] 
  []
 
 [4]
-Overfull \hbox (7.0573pt too wide) in paragraph at lines 173--174
+Overfull \hbox (7.0573pt too wide) in paragraph at lines 148--149
+[][] 
+ []
+
+
+Overfull \hbox (7.0573pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
@@ -502,7 +502,7 @@ Overfull \hbox (7.0573pt too wide) in paragraph at lines 173--174
 Here is how much of TeX's memory you used:
  12620 strings out of 476025
  259640 string characters out of 5790017
- 1860388 words of memory out of 5000000
+ 1858388 words of memory out of 5000000
  32877 multiletter control sequences out of 15000+600000
  517707 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -518,7 +518,7 @@ c/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti12.pfb>
-Output written on assignment1.pdf (8 pages, 124599 bytes).
+Output written on assignment1.pdf (8 pages, 125031 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream

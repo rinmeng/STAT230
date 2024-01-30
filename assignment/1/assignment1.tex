@@ -47,10 +47,11 @@
 		$$S_{odd \, \lor \, prime} =$$ 
 		$$\{(1,1), (1,2), (2,1), (2,3), (3,2),$$		
 		$$(4,1), (1,4),(3,4), (4,3), (2,5),$$
-		$$(5,2), (1,6), (6,1), (5,6),(6,5)\}$$
+		$$(5,2), (1,6), (6,1), (5,6), (6,5)$$
+		$$(3,6), (6,3), (4,5), (5,4) \}$$
 		
 		Let $P(S_{odd \, \lor \, prime})$ be the probability of getting a number that is $odd \lor prime$ by rolling two fair dice, then we have
-		$$P(S_{odd \, \lor \, prime}) = \frac{Size \, of \, S_{odd \, \lor \, prime}}{n} = \frac{15}{36}$$
+		$$P(S_{odd \, \lor \, prime}) = \frac{Size \, of \, S_{odd \, \lor \, prime}}{n} = \frac{19}{36}$$
 		
 	\end{enumerate}
 	
@@ -66,8 +67,12 @@
 		
 		\item The median value of $\phi$ is
 		$$\phi_{sorted} =$$	
-		$$\{3.55, 3.55, 3.56, 3.56, 3.57, 3.57, 3.59, 3.59, 3.59, 3.60,$$
-		$$3.61, 3.63, 3.65, 3.66, 3.71, 3.73, 3.75, 3.99, 4.15, 4.79$$
+		$$\{3.55, 3.55, 3.56, 3.56, 3.57,$$
+		$$3.57, 3.59, 3.59, 3.59, 3.60,$$
+		$$3.61, 3.63, 3.65, 3.66, 3.71,$$
+		$$3.73, 3.75, 3.99, 4.15, 4.79\}$$
+		
+		$$\tilde{\phi} = \frac{3.60}{3.61} = 3.605$$
 		
 		\item The $IQR$ of $\phi$ is
 		$$Q1 = \frac{3.57 + 3.57}{2} = 3.57$$
@@ -210,7 +215,7 @@
 	$$P(A \cap B) = P(B) - P(A^c \cap B) \qquad (\Gamma)$$
 	by rearranging $(\gamma)$. 
 	
-	We will now substitute $(\phi)$ into $(\gamma)$  where we will have
+	We will now substitute $(\phi)$ into $(\Gamma)$  where we will have
 	$$P(A \cap B) = P(B) - P(A^c)P(B)$$
 	$$P(A \cap B) = P(B)(1 - P(A^c)) \qquad (\psi)$$
 	and by Theorem 2.19 (Complement Rule), we learn that
@@ -235,7 +240,7 @@
 	$$= (1 \times \frac{1}{2}) + (\frac{1}{2} \times \frac{1}{2})$$
 	$$= \frac{3}{4}$$
 	and using Theorem 2.21 (Bayes' Theorem), we can conclude that
-	$$P(C|S) = \frac{P(S|C)P(C)}{P(S)} = \frac{1 \times \frac{1}{2}}{\frac{3}{4}} = \frac{2}{3}$$
+	$$P(C_A|S) = \frac{P(S|C_A)P(C_A)}{P(S)} = \frac{1 \times \frac{1}{2}}{\frac{3}{4}} = \frac{2}{3}$$
 	
 	End of Assignment 1.
 	
