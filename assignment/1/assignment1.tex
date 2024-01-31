@@ -96,8 +96,8 @@
 		\begin{tikzpicture}
 			\draw[fill=black!0] (0,0) rectangle (12,7);
   			\draw[fill=blue!20] (6,4.5) circle (1.5cm); % Circle A
-  			\draw[fill=red!0] (5,2.5) circle (1.5cm); % Circle B
-  			\draw[fill=green!0] (7,2.5) circle (1.5cm); % Circle C
+  			\draw[fill=blue!0] (5,2.5) circle (1.5cm); % Circle B
+  			\draw[fill=blue!0] (7,2.5) circle (1.5cm); % Circle C
   			\draw (6,4.5) circle (1.5cm); % Outline of Circle A
   			\draw (5,2.5) circle (1.5cm); % Outline of Circle B
   			\draw (7,2.5) circle (1.5cm); % Outline of Circle C
@@ -108,21 +108,16 @@
   			\node at (1,6) {S}; % Label for Rectangle S
 		\end{tikzpicture}
 		
-		
 		\item This is the Venn Diagram where at least one of the events $A$, $B$, or $C$ occurs.
 
 		\begin{tikzpicture}
 			\draw[fill=black!0] (0,0) rectangle (12,7);
-			
   			\draw[fill=blue!20] (6,4.5) circle (1.5cm); % Circle A
+  			\draw[fill=blue!20] (7,2.5) circle (1.5cm); % Circle C
+  			\draw[fill=blue!20] (5,2.5) circle (1.5cm); % Circle B
   			\draw (6,4.5) circle (1.5cm); % Outline of Circle A
-  			
-  			\draw[fill=green!20] (7,2.5) circle (1.5cm); % Circle C
-  			\draw (7,2.5) circle (1.5cm); % Outline of Circle C
-  			
-  			\draw[fill=red!20] (5,2.5) circle (1.5cm); % Circle B
   			\draw (5,2.5) circle (1.5cm); % Outline of Circle B
-  			
+  			\draw (7,2.5) circle (1.5cm); % Outline of Circle C
   			\node at (6,5) {A}; % Label for Circle A
   			\node at (4,2.5) {B}; % Label for Circle B
   			\node at (8,2.5) {C}; % Label for Circle C
@@ -134,9 +129,9 @@
 		
 		\begin{tikzpicture}
 			\draw[fill=black!0] (0,0) rectangle (12,7);
-			\draw[fill=green!20] (7,2.5) circle (1.5cm); % Circle C
+			\draw[fill=blue!20] (7,2.5) circle (1.5cm); % Circle C
   			\draw[fill=blue!20] (6,4.5) circle (1.5cm); % Circle A
-  			\draw[fill=red!0] (5,2.5) circle (1.5cm); % Circle B
+  			\draw[fill=blue!0] (5,2.5) circle (1.5cm); % Circle B
   			\draw (6,4.5) circle (1.5cm); % Outline of Circle A
   			\draw (7,2.5) circle (1.5cm); % Outline of Circle C
   			\draw (5,2.5) circle (1.5cm); % Outline of Circle B  	
@@ -158,11 +153,11 @@
   			\end{scope}
   			\begin{scope} % Scope for transparency
     			\clip (5,2.5) circle (1.5cm); % Circle B
-    			\fill[red!20] (7,2.5) circle (1.5cm); % Circle C
+    			\fill[blue!20] (7,2.5) circle (1.5cm); % Circle C
   			\end{scope}
   			\begin{scope} % Scope for transparency
     			\clip (7,2.5) circle (1.5cm); % Circle C
-    			\fill[green!20] (6,4.5) circle (1.5cm); % Circle A
+    			\fill[blue!20] (6,4.5) circle (1.5cm); % Circle A
   			\end{scope}
   			\begin{scope} % Scope for intersection ABC
     			\clip (6,4.5) circle (1.5cm);
