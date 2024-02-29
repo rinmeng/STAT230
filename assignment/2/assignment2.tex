@@ -65,7 +65,7 @@
 				$$P(T > 5) = 1 + (e^{-5/3} - e^{0/3})$$
 				$$P(T > 5) = 1 + (\frac{1}{e^{5/3}} - 1)$$
 				$$P(T > 5) = 1 - 0.811 = 0.19$$
-			\item Given that $C = \frac{1}{2}$ and $f(t) = Ce^{-t/3}$ then, 
+			\item Given that $C = \frac{1}{3}$ and $f(t) = Ce^{-t/3}$ then, 
 			$$E[X] = \int_{-\infty}^{\infty} xf(x)dx = \int_{-\infty}^{\infty} \frac{1}{3}e^{-x/3}xdx$$
 			$$E[X] = \int_{0}^{1} \frac{1}{3}e^{-x/3}xdx$$
 			$$= \frac{1}{3}\int_{0}^{1} xe^{-x/3}dx$$
@@ -93,18 +93,27 @@
 		
 		\item Given: Sample size: 500, population in favor of incumbent: 0.46
 			\begin{enumerate}
-				\item $P(X \geq 250) = 1 - P(X < 250)$
+				\item Since this is a Binomial Distribution, we have
+
+				$P(X \geq 250) = 1 - P(X < 250)$
 				
 				$\mu = np = 500 \times 0.46 = 230$
 				
 				$\sigma = \sqrt{np(1-p)} = \sqrt{230(1-0.46)} \simeq 11.14$
-
-				Since this is a Binomial Distribution, we have
 				$$Z = \frac{x - \mu}{\sigma} = \frac{249.5 - 230}{11.14} = 1.75$$
 				where x is adjusted for continuity correction, then we have:
 				$$P(Z \geq 1.75) = 1 - P(Z < 1.75) = 1 - 0.9599 \simeq 0.04$$
 				
-			\item Given that: $f(x) = 2x$, $Y = g(x) = \frac{1}{1 + x}$
+				\item Given: sample $n = 50$. Using Poisson Approximation, the average success rate is $\lambda = np = 50(0.46) = 23$. So, it is true that
+				$$P(X = x) = e^{-\lambda} \frac{\lambda^x}{x!} = e^{-23} \cdot \frac{23^{25}}{25!} = 0.073$$
+				
+				
+				
+				
+				
+			\end{enumerate}
+			
+		\item Given that: $f(x) = 2x$, $Y = g(x) = \frac{1}{1 + x}$
 			
 			Then it is true that:
 			$$E[Y] = E[g(x)] = \int_{-\infty}^{\infty} g(x)f(x)dx$$
@@ -117,7 +126,6 @@
 			$$= 2(u - ln(|u|)\vert_{1}^{2}du$$
 			$$= 2(2 - ln(2)) - 2(1 - ln(1) = 2(1.31) - 2(1 - 0)$$
 			$$E[Y] = 2.62 - 2 = 0.62$$
-			\end{enumerate}
 \end{enumerate}
 
 End of Assignment 2.
