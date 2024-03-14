@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\begin{document}
+\title{STAT230 Assignment 3}
+\author{Rin Meng \\ Student ID: 51940633}
+\maketitle
+
+
+\begin{enumerate}
+
+	\item 
+		\begin{enumerate}
+		\item
+			\begin{proof}
+				Given: $X$ is a continuous variable that follows a normal distribution with mean $\mu$ and standard deviation $\sigma$. Which also means 
+				$$X \sim N(\mu, \sigma^2)$$
+				We want to show 95\% of the area under the normal density curve lies between 2 standard deviation of the mean. By definition of the given statement, we can safely assume that 
+				$$Z = \frac{X - \mu}{\sigma}$$
+			and standardized normal distribution, we will have
+				$$Z \sim N(0, 1)$$
+			and it is also true that to compute $P(X \leq x)$, we can use the fact that 
+				$$P(X \leq x) =  P(\frac{X - \mu}{\sigma} \leq \frac{x - \mu}{\sigma})$$.
+				$$= P(z \leq \frac{x - \mu}{\sigma})$$
+				$$\Rightarrow P(X \leq \pm 2 \sigma) = P(z \leq \pm \frac{2 \sigma - \mu}{\sigma})$$
+				the $\pm$ is because we want to show "between" $2\sigma$. Now, if we substitute $\mu = 0$ and $\sigma = 1$ we will have the following:
+				$$P(X \leq \pm 2(1)) = P(z \leq \pm \frac{2(1) - 0}{1}) = P(z \leq \pm 2)$$
+				Because we want a between value, we would need to subtract $P(z \leq 2)$ from $P(z \leq -2)$ as per $z$ table. So now we have, 
+				$$P(X \leq 2\sigma) = P(z \leq 2) - P(z \leq -2)$$
+				$$= 0.9772 - 0.0228 = 0.9544 \simeq 0.95$$
+				With this value, $0.95$, it implies that the 95\% of the area lies between $P(z \leq 2)$ and $P(z \leq -2)$.
+			
+				$\therefore$ It is true that, 95\% of the area under the normal density curve lies between $2\sigma$ of the mean.
+			\end{proof}
+	
+		\item
+			\begin{proof}
+				Given: $Y_1$ and $Y_2$ are independent random variables, $U_1 = Y_1 + Y_2$ and $U_2 = Y_1 - Y_2$.
+				
+				We want to show $Cov(Y_1, Y_2)$ in terms of $Y_1$ and $Y_2$. The covariance formula is given by:
+				$$Cov(X,Y) = E[(X - \mu_x)(Y- \mu_y)] = E[XY] - E[X]E[Y]$$
+				Since $Y_1$ and $Y_2$ are independent random variables, it is true that, 
+				$$Cov(Y_1,Y_2) = 0 = E[Y_1 Y_2] - E[Y_1]E[Y_2]$$
+				Rearranging our $U_1$, and $U_2$, we find out that 					$$Y_1 = U_1 - Y_2$$
+				$$Y_1 = U_2 + Y_2$$
+				$$U_1 - Y_2 = U_2 + Y_2$$
+				$$U_1 - U_2 = 2Y_2$$
+				$$Y_2 = \frac{U_1 - U_2}{2}$$
+				$$\Rightarrow Y_1 = U_2 + \frac{U_1 - U_2}{2} = \frac{2U_2}{2} + \frac{U_1 - U_2}{2}$$
+				$$Y_1 = \frac{U_1 + U_2}{2}$$
+				Following our formula for covariance above, we have to find $E[Y_1]$ and $E[Y_2]$ to solve it. Let us remind ourselves that $E[aX] = aE[X]$ and that $E[aX + bY + c] = aE[X] + bE[Y] + c$ where $a$, $b$, and $c$ are some arbitrary constant. Then we will have:
+				$$E[Y_1] = E[\frac{U_1 + U_2}{2}] = E[\frac{1}{2}(U_1 + U_2)]$$
+				$$= \frac{1}{2}E[(U_1 + U_2)]$$
+				and $E[Y_2]$ will follow the same concept as follows:
+				$$E[Y_2] = E[\frac{U_1 - U_2}{2}] = E[\frac{1}{2}(U_1 - U_2)]$$
+				$$= \frac{1}{2}E[(U_1 - U_2)]$$
+				Now we substitute it into the formula 
+				$$Cov(Y_1, Y_2) = E[Y_1 Y_2] - E[Y_1]E[Y_2]$$
+				$$= E[\frac{U_1 + U_2}{2} \times \frac{U_1 - U_2}{2}] - \frac{1}{2}E[(U_1 + U_2)]\frac{1}{2}E[(U_1 - U_2)]$$
+				$$= E[\frac{U_1^2 - U_2^2}{4}] - \frac{1}{4}E[(U_1 + U_2)]E[(U_1 - U_2)]$$
+				$$= \frac{1}{4}E[U_1^2 - U_2^2] - \frac{1}{4}((E[U_1] + E[U_2]) \times (E[U_1] - E[U_2]))$$
+				$$= \frac{1}{4}E[U_1^2 - U_2^2] - \frac{1}{4}(E[U_1]^2 - E[U_2]^2)$$
+				$$= \frac{1}{4}(E[U_1^2 - U_2^2] -(E[U_1]^2 - E[U_2]^2))$$
+				$$= \frac{1}{4}(E[U_1^2] - E[U_2^2] - E[U_1]^2 + E[U_2]^2)$$
+				$$= \frac{1}{4}((E[U_1^2] - E[U_1]^2) - (E[U_2^2] - E[U_2]^2))$$
+				We recall that $Var[X] = E[X^2] - E[X]^2$ so then we have,
+				$$Cov(Y_1,Y_2) = \frac{1}{4}(Var[U_1] - Var[U_2])$$
+				$\therefore$ We have expressed $Cov(Y_1,Y_2)$ in terms of the variance of  $Y_1$ and $Y_2$.
+			\end{proof}
+		\end{enumerate}
+		\item The $Cov(X,Y) = E[XY] - E[X]E[Y]$
+		and $Cov(X,Y) = 0$ when X and Y are independent but it is also given that the pdf is,
+		\begin{equation*}
+			f(x, y) = 
+			\begin{cases} 
+			2x & \text{for } 0 \leq x \leq 1, 0 \leq y \leq 1 \\
+			0 & \text{elsewhere}
+			\end{cases}
+		\end{equation*}
+		Which ultimately implies that the variable $x$ and $y$ is independent because $f(x,y)$ is not affected for any value of $y$ in $0 \leq y \leq 1$. Which leads to our conclusion that $Cov(X,Y) = 0$.
+		\item
+		\begin{proof} Let us denote the given joint probability distribution table with $\phi$
+			
+			We want to show that $X$ and $Y$ are dependent, then we need to proof the following
+			$$\exists(X,Y)\in\phi: P(X,Y) \neq P(X)P(Y)$$
+			so then we can take the pair $(0,0)\in\phi$ where
+			$$P(0,0) = 0$$
+			Now, we find the marginal probability of the following,
+			$$P(X = 0) = \frac{3}{16} + 0 + \frac{3}{16} = \frac{6}{16}$$
+			$$P(Y = 0) = \frac{3}{16} + 0 + \frac{3}{16} = \frac{6}{16}$$
+			Then, 
+			$$P(X = 0)P(Y = 0) = \frac{6}{16} \times \frac{6}{16} = \frac{36}{256}$$
+			So,
+			$$P(0,0) \neq P(X = 0)P(Y = 0) \Rightarrow 0 \neq \frac{36}{256}$$
+			Hence, we have proven that $X$ and $Y$ are not independent.
+			
+			Now we want to show that $X$ and $Y$ have zero covariance, then we need to proof the following
+			$$\forall(X,Y)\in\phi, C(X,Y) = E[XY] - E[X]E[Y] = 0$$
+			First we find the marginal sum of
+			$$E[X] = \sum xP(X = x)$$
+			$$= -1(\frac{1}{16} + \frac{3}{16} + \frac{1}{16}) + 0(\frac{3}{16} + 0 + \frac{3}{16}) + 1(\frac{1}{16}+ \frac{3}{16} + \frac{1}{16})$$
+			$$= -\frac{5}{16} + \frac{5}{16} = 0$$
+			$$E[Y] = \sum yP(Y = y)$$
+			$$= -1(\frac{1}{16} + \frac{3}{16} + \frac{1}{16}) + 0(\frac{3}{16} + 0 + \frac{3}{16}) + 1(\frac{1}{16}+ \frac{3}{16} + \frac{1}{16})$$
+			$$= -\frac{5}{16} + \frac{5}{16} = 0$$
+			and now we find,
+			$$E[XY] = \sum xyP(X = x, Y = y)$$
+			$$= (-1)(-1)(\frac{1}{16}) + (0)(-1)(\frac{3}{16}) + (1)(-1)(\frac{1}{16})$$
+			$$ + (-1)(0)(\frac{3}{16}) + (0)(0)(0) + (1)(0)(\frac{3}{16})$$
+			$$ + (-1)(1)(\frac{1}{16}) + (0)(1)(\frac{3}{16}) + (1)(1)(\frac{1}{16})$$
+			$$= \frac{1}{16} + 0 - \frac{1}{16} + 0 + 0 + 0 - \frac{1}{16} + 0 + \frac{1}{16} = 0$$
+			Now, we can finally substitute it in the equation,
+			$$4C(X,Y) = E[XY] - E[X]E[Y] = 0 - 0*0 = 0$$
+			Hence, we have proven that the $Cov(X, Y) = 0$.
+			
+			$\therefore$ We have shown that $X$ and $Y$ are dependent, but they have zero covariance.
+		\end{proof}
+
+		
+\end{enumerate}
+
+\end{document}
