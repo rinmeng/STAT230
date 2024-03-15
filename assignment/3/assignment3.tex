@@ -81,9 +81,7 @@
 		\end{equation*}
 		Which ultimately implies that the variable $x$ and $y$ is independent because $f(x,y)$ is not affected for any value of $y$ in $0 \leq y \leq 1$. Which leads to our conclusion that $Cov(X,Y) = 0$.
 		\item
-		\begin{proof} Let us denote the given joint probability distribution table with $\phi$
-			
-			We want to show that $X$ and $Y$ are dependent, then we need to proof the following
+		\begin{proof} Let us denote the given joint probability distribution table with $\phi$. We want to show that $X$ and $Y$ are dependent, then we need to proof the following
 			$$\exists(X,Y)\in\phi: P(X,Y) \neq P(X)P(Y)$$
 			so then we can take the pair $(0,0)\in\phi$ where
 			$$P(0,0) = 0$$
@@ -112,13 +110,37 @@
 			$$ + (-1)(1)(\frac{1}{16}) + (0)(1)(\frac{3}{16}) + (1)(1)(\frac{1}{16})$$
 			$$= \frac{1}{16} + 0 - \frac{1}{16} + 0 + 0 + 0 - \frac{1}{16} + 0 + \frac{1}{16} = 0$$
 			Now, we can finally substitute it in the equation,
-			$$4C(X,Y) = E[XY] - E[X]E[Y] = 0 - 0*0 = 0$$
+			$$C(X,Y) = E[XY] - E[X]E[Y] = 0 - 0*0 = 0$$
 			Hence, we have proven that the $Cov(X, Y) = 0$.
 			
 			$\therefore$ We have shown that $X$ and $Y$ are dependent, but they have zero covariance.
 		\end{proof}
-
-		
+		\item Let us denote the data, sorted by ascending order, for the past weeks by $x$. So we have, 
+		$$x = \{585, 590, 593, 593, 598, 602, 604\}$$
+		So then, $\bar{x} = \frac{4165}{7} = 595$, $\mu_0 = 600$, $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$.
+		$$\sigma = \sqrt{\frac{\sum (x - \bar{x})^2}{n}} = 6.23$$
+		$$\sigma_{\bar{x}} = \frac{6.23}{\sqrt{7}} = 0.89$$
+		\begin{enumerate}
+			\item $H_0 : \mu = \mu_0 = 600$, because $\mu < \mu_0$, we will use one-sided (lower-tail) test where $H_1 : \mu < \mu_0 \Rightarrow$ p-value $= P(Z \leq z_{obs})$, since it is 5\% level of significant, then, $CI = 95\% \Rightarrow \alpha = 0.05$.
+				$$z_{obs} = \frac{\bar{x} - \mu_0}{\sigma_{\bar{x}}} = \frac{595 - 600}{0.89} = -5.62$$
+				$$P(Z \leq -5.62) \simeq 0$$
+				and it follows that the p-value $< \alpha$ because p-value $= 0 < 0.05 = \alpha$. Therefore, we can conclude that we will reject the null hypothesis and yes, the average yield is less than 600 tons.
+			\item Some assumptions that I made throughout this observations are:
+				\begin{enumerate}
+					\item The data $x$ follows a normal distribution.
+					\item The data $x$ are independent of each other.
+					\item The data $x$ are continuous.
+				\end{enumerate}
+			\item If $\alpha = 0.01$, it is making it harder to reject the null hypothesis but we would still have, p-value $= 0 < 0.01 = \alpha$. Which still implies we need to reject the null hypothesis.
+			\item Then, our p-value comparison turns into,
+			$$2P(Z \geq |z_{obs}|) = 2(0) = 0$$
+			since the z-distribution is symmetric and still, p-value $= 0 < 0.05 = \alpha$. Which still implies we need to reject the null hypothesis.
+			\item The confidence interval will be calculated as follows:
+			$$CI_{95\%} = \bar{x} \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} = 595 \pm (0.025)\frac{6.23}{\sqrt{7}} \simeq 595 \pm 0.0589$$
+			$$CI_{95\%} = (595.0589, 594.9411)$$
+			This means that since our interval is (595.0589, 594.9411), it is impossible for the company to produce, on average, 600 tons of chemical per day, as 600 does not lie anywhere in our calculated interval (595.0589, 594.9411).
+			\item Our result is perfectly consistent with part (a) because we already knew that we are going to reject the null hypothesis where it is believed that the company is able to make 600 tons of chemical per day.
+		\end{enumerate}
 \end{enumerate}
 
 \end{document}
