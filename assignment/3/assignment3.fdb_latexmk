@@ -1,0 +1,17 @@
+# Fdb version 4
+["pdflatex"] 1710889374 "/Users/rin/eclipse-workspace/STAT230/assignment/3/assignment3.tex" "assignment3.pdf" "assignment3" 1710889374 2
+  "/Users/rin/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/Users/rin/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls" 1667332637 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "/Users/rin/Library/TinyTeX/texmf-dist/tex/latex/base/size12.clo" 1667332637 8449 c314623021fbddd0180c05345324933c ""
+  "/Users/rin/Library/TinyTeX/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
+  "/Users/rin/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1676321432 6476940 6dc377971288122ac2c5ee3f41a92608 ""
+  "/Users/rin/Library/TinyTeX/texmf.cnf" 1676321228 708 85fd07691b6294ba94c59dbc62380410 ""
+  "/Users/rin/eclipse-workspace/STAT230/assignment/3/assignment3.tex" 1710889372 9094 2d67d5a764287e18fe9cbbed14144bb0 ""
+  "assignment3.aux" 0 -1 0 "pdflatex"
+  "assignment3.tex" 1710889372 9094 2d67d5a764287e18fe9cbbed14144bb0 ""
+  "tikz.sty" 0 -1 0 ""
+  (generated)
+  "assignment3.aux"
+  "assignment3.log"
+  "assignment3.pdf"
+  (rewritten before read)
