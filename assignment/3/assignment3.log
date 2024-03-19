@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.26)  14 MAR 2024 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.26)  19 MAR 2024 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,6 +491,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4] [5]
+Overfull \hbox (5.07722pt too wide) in paragraph at lines 133--134
+\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 (6\OML/cmm/m/it/12 ; t[]\OT1/cmr/m/n/12 ) = 3
+\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 143$, fi-nally we have, $\OML/cmm/m/it/12 t \
+OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8198 \OML/cmm/m/it/12 < \OT
+1/cmr/m/n/12 3\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 143 = \OML/cmm/m/it/12 t\OT1/cm
+r/m/n/12 (6\OML/cmm/m/it/12 ; t[]\OT1/cmr/m/n/12 )$,
+ []
+
 [6] (./assignment3.aux) ) 
 Here is how much of TeX's memory you used:
  13099 strings out of 476025
@@ -499,7 +507,7 @@ Here is how much of TeX's memory you used:
  33339 multiletter control sequences out of 15000+600000
  520177 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,9n,104p,412b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,104p,493b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
@@ -509,14 +517,13 @@ nts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
-.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb>
-Output written on assignment3.pdf (6 pages, 140854 bytes).
+y10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msam10.pfb>
+Output written on assignment3.pdf (6 pages, 133108 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -117,29 +117,31 @@
 		\end{proof}
 		\item Let us denote the data, sorted by ascending order, for the past weeks by $x$. So we have, 
 		$$x = \{585, 590, 593, 593, 598, 602, 604\}$$
-		So then, $\bar{x} = \frac{4165}{7} = 595$, $\mu_0 = 600$, $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$.
-		$$\sigma = \sqrt{\frac{\sum (x - \bar{x})^2}{n}} = 6.23$$
-		$$\sigma_{\bar{x}} = \frac{6.23}{\sqrt{7}} = 0.89$$
+		So then, $\bar{x} = \frac{4165}{7} = 595$, $\mu_0 = 600$, $\sum (x - \bar{x})^2 = 272$, $n = 7$, and to find the sample standard deviation $s$, we have:
+		$$s = \sqrt{\frac{1}{n - 1} \sum (x - \bar{x})^2} = \sqrt{\frac{1}{7 - 1} 272} = \sqrt{\frac{272}{6} }$$
+		$$s = 6.73$$
 		\begin{enumerate}
-			\item $H_0 : \mu = \mu_0 = 600$, because $\mu < \mu_0$, we will use one-sided (lower-tail) test where $H_1 : \mu < \mu_0 \Rightarrow$ p-value $= P(Z \leq z_{obs})$, since it is 5\% level of significant, then, $CI = 95\% \Rightarrow \alpha = 0.05$.
-				$$z_{obs} = \frac{\bar{x} - \mu_0}{\sigma_{\bar{x}}} = \frac{595 - 600}{0.89} = -5.62$$
-				$$P(Z \leq -5.62) \simeq 0$$
-				and it follows that the p-value $< \alpha$ because p-value $= 0 < 0.05 = \alpha$. Therefore, we can conclude that we will reject the null hypothesis and yes, the average yield is less than 600 tons.
+			\item $H_0 : \mu = \mu_0 = 600$, because $\mu < \mu_0$, $H_1 : \mu < \mu_0,$ 
+				$$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} = \frac{595 - 600}{6.73 / \sqrt{6}} = -1.8198$$
+				Using the t table for $df = n - 1 = 6$, and where $\alpha = 0.050 \Rightarrow t_{0.050}$ so then, $t(df, t_{\alpha}) = t(6, t_{0.050}) = 1.943$ and we can clearly see that, $t = 1.8198 < 1.943 = t(6, t_{0.050})$, and so, we fail to reject the null hypothesis $H_0$.
 			\item Some assumptions that I made throughout this observations are:
 				\begin{enumerate}
 					\item The data $x$ follows a normal distribution.
 					\item The data $x$ are independent of each other.
 					\item The data $x$ are continuous.
 				\end{enumerate}
-			\item If $\alpha = 0.01$, it is making it harder to reject the null hypothesis but we would still have, p-value $= 0 < 0.01 = \alpha$. Which still implies we need to reject the null hypothesis.
-			\item Then, our p-value comparison turns into,
-			$$2P(Z \geq |z_{obs}|) = 2(0) = 0$$
-			since the z-distribution is symmetric and still, p-value $= 0 < 0.05 = \alpha$. Which still implies we need to reject the null hypothesis.
+			\item Decreasing the $\alpha$ value will make it harder for us to accept the null hypothesis $H_0$. We have, $\alpha = 0.01 \Rightarrow t_{0.010}$, then we have, $t(6, t_{0.010}) = 3.143$, finally we have, $t = 1.8198 < 3.143 = t(6, t_{0.010})$, and so, we also fail to reject the null hypothesis $H_0$.
+			
+			\item If our alternative hypothesis was two-tailed
+with $\alpha = 0.05 \Rightarrow \frac{\alpha}{2} = 0.025 \Rightarrow t(6, t_{0.025})$, Then, our t-value comparison turns into,
+			$$t = 1.8198 < 3.143 = t(6, t_{0.025})$$
+			and so, we would still fail to reject the null hypothesis $H_0$.
+			
 			\item The confidence interval will be calculated as follows:
-			$$CI_{95\%} = \bar{x} \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} = 595 \pm (0.025)\frac{6.23}{\sqrt{7}} \simeq 595 \pm 0.0589$$
-			$$CI_{95\%} = (595.0589, 594.9411)$$
-			This means that since our interval is (595.0589, 594.9411), it is impossible for the company to produce, on average, 600 tons of chemical per day, as 600 does not lie anywhere in our calculated interval (595.0589, 594.9411).
-			\item Our result is perfectly consistent with part (a) because we already knew that we are going to reject the null hypothesis where it is believed that the company is able to make 600 tons of chemical per day.
+			$$CI_{95\%} = \bar{x} \pm z_{\frac{\alpha}{2}} \frac{s}{\sqrt{n}} = 595 \pm (0.025)\frac{6.73}{\sqrt{7}} \simeq 595 \pm 0.0635$$
+			$$CI_{95\%} = (595.0635, 594.936)$$
+			This means that it is impossible for the company to produce, on average, 600 tons of chemical per day, as 600 does not lie anywhere in our calculated confidence interval.
+			\item Our result is not consistent with part (a) because we already knew that we failed to reject the null hypothesis where it is believed that the company is able to make 600 tons per day but when compared to our confidence interval of 95\%, it is impossible that the factory can produce 600 tons per day, which leads me to believe that failing to reject or rejecting the null hypothesis does not directly say that the null hypothesis is true or false.
 		\end{enumerate}
 \end{enumerate}
 End of Assignment 3.
